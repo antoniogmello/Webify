@@ -801,19 +801,19 @@ export const services4 = [
     id: 1,
     icon: "/assets/img/icons/solid/edit.svg",
     iconColorClass: "text-fuchsia",
-    title: "Content Marketing",
+    title: "Consutoria",
     description:
-      "Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus cras justo.",
+      " Gratuitamente consultamos a sua empresa e encontramos onde é que a implementação de um software maximiza o seu retorno.",
     learnMoreLink: "#",
     linkColorClass: "link-fuchsia",
   },
   {
     id: 2,
-    icon: "/assets/img/icons/solid/team.svg",
+    icon: "/assets/img/icons/solid/code.svg",
     iconColorClass: "text-violet",
-    title: "Social Engagement",
+    title: "APIs",
     description:
-      "Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus cras justo.",
+      " Desenvolvemos APIs, desenhadas de raíz, ajustadas às suas necessidades e compatíveis com o vosso software existente.",
     learnMoreLink: "#",
     linkColorClass: "link-violet",
   },
@@ -821,21 +821,21 @@ export const services4 = [
     id: 3,
     icon: "/assets/img/icons/solid/lamp.svg",
     iconColorClass: "text-orange",
-    title: "Identity & Branding",
+    title: "Inteligência Artificial",
     description:
-      "Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus cras justo.",
+      "Implementamos inteligência artificial nos softwares dos nossos clientes para poderem gerir as suas equipas e recursos de forma otimizada.",
     learnMoreLink: "#",
     linkColorClass: "link-orange",
   },
   {
     id: 4,
-    icon: "/assets/img/icons/solid/delivery-box.svg",
-    iconColorClass: "text-green",
-    title: "Product Design",
+    icon: "/assets/img/icons/solid/seo.svg",
+    iconColorClass: "text-yellow",
+    title: "Websites",
     description:
-      "Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus cras justo.",
+      " Num end-to-end service, consultamos a sua empresa e entregamos um site desenvolvido em código, usando linguagens e frameworks recentes.",
     learnMoreLink: "#",
-    linkColorClass: "link-green",
+    linkColorClass: "link-yellow",
   },
 ];
 

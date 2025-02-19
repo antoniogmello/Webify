@@ -1,51 +1,43 @@
 <script setup>
-import { onMounted, ref, watch } from "vue";
+import { onMounted, watch } from "vue";
 import AOS from "aos";
+import { useRoute } from "vue-router";
 import initClipboard from "@/utlis/initClipboard";
 import initPrism from "@/utlis/initPrism";
 import initPlayer from "@/utlis/initVideoplayer";
-import { useRoute } from "vue-router";
 import { injectSvg } from "./utlis/injextSvg";
-// Get the current route
+
 const route = useRoute();
 
-// Define a reactive variable to store the current route path
-
 onMounted(() => {
-  // Check if the window object is defined
+  // Inicialização mais segura
   if (typeof window !== "undefined") {
-    // Import the script only on the client side
-    import("bootstrap/dist/js/bootstrap.esm").then((module) => {
-      // Module is imported, you can access any exported functionality if
-    });
+    import("bootstrap/dist/js/bootstrap.bundle.min.js");
   }
 
   AOS.init({
     duration: 1400,
-    // once: true,
+    once: true, // Recomendado para performance
   });
 });
 
 watch(
   () => route.path,
   () => {
+    // Usar nextTick para garantir atualização do DOM
     setTimeout(() => {
       initPlayer();
       initPrism();
       initClipboard();
       injectSvg();
-    });
+      AOS.refresh(); // Atualizar AOS após mudança de rota
+    }, 100);
   }
 );
-
-import "aos/dist/aos.css"; // Import the AOS CSS
 </script>
 
-<template><RouterView /></template>
+<template>
+  <RouterView />
+</template>
 
-<style lang="css">
-@import "../public/assets/css/plugins.css";
-@import "../public/assets/css/colors/colors.css";
-@import "../public/assets/css/style.css";
-@import "../public/assets/css/custom.css";
-</style>
+<style lang="css"></style>
